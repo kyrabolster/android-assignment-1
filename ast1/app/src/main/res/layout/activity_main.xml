@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorOnPrimary"
+        tools:context=".MainActivity">
+
+        <Button
+            android:id="@+id/countDown_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin16"
+            android:padding="@dimen/padding16"
+            android:text="@string/count_down"
+            app:backgroundTint="?attr/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <Button
+            android:id="@+id/countUp_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin16"
+            android:padding="@dimen/padding16"
+            android:text="@string/count_up"
+            app:backgroundTint="?attr/colorPrimary"
+            app:layout_constraintBottom_toTopOf="@+id/countDown_button"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <Button
+            android:id="@+id/toast_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin16"
+            android:padding="@dimen/padding16"
+            android:text="Toast"
+            app:backgroundTint="?attr/colorPrimary"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/count_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/margin16"
+            android:background="@color/lilac"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="10"
+            android:textSize="@dimen/number_size"
+            app:layout_constraintBottom_toTopOf="@+id/countUp_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toast_button"
+            app:layout_constraintVertical_bias="0.625" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
